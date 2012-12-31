@@ -290,7 +290,7 @@ Para añadir los archivos TODO e index.html, se teclearian los números:
 	  3:    unchanged        +5/-1 lib/simplegit.rb
 	Update>>
 
-El asterisco '*' al lado de cada archivo indica que dicho archivo ha sido seleccionado para ser preparado. Pulsando la tecla [Enter] tras el indicador 'Update>>', Git toma lo seleccionado y lo añade al área de preparación: 
+El asterisco `*` al lado de cada archivo indica que dicho archivo ha sido seleccionado para ser preparado. Pulsando la tecla [Enter] tras el indicador 'Update>>', Git toma lo seleccionado y lo añade al área de preparación: 
 
 	Update>> 
 	updated 2 paths
@@ -422,7 +422,7 @@ Por ejemplo, si se está trabajando sobre un par de archivos e incluso uno de el
 	#
 	#      modified:   index.html
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#      modified:   lib/simplegit.rb
@@ -453,7 +453,7 @@ En este ejemplo, se habian realizado dos guardados rápidos anteriores, por lo q
 
 	$ git stash apply
 	# On branch master
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#      modified:   index.html
@@ -471,7 +471,7 @@ Las modificaciones sobre los archivos serán aplicadas; pero no así el estado d
 	#
 	#      modified:   index.html
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#      modified:   lib/simplegit.rb
@@ -500,7 +500,7 @@ Si se almacena rápidamente (stash) un cierto trabajo, se deja en la pila durant
 	#
 	#      modified:   index.html
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#      modified:   lib/simplegit.rb
@@ -928,7 +928,7 @@ Tras esto, la carpeta `rack` sí que está exactamente en el estado que le corre
 	 1 files changed, 1 insertions(+), 1 deletions(-)
 	[master*]$ git status
 	# On branch master
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#   (use "git checkout -- <file>..." to discard changes in working directory)
 	#

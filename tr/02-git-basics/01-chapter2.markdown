@@ -102,13 +102,13 @@ Gelin şimdi halihazırda izlenmekte olan bir dosyayı değiştirelim. İzlenmek
 	#
 	#	new file:   README
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#	modified:   benchmarks.rb
 	#
 
-`benchmarks.rb` dosyası “Changed but not updated” başlıklı bir bölümün altında görünüyor —bu başlık izlenmekte olan bir dosyada değişiklik yapılmış olduğu fakat dosyanın henüz hazırlık alanına alınmadığı durumlarda kullanılır. Dosyayı hazırlamak için, `git add` komutunu çalıştırın (`git add` çok amaçlı bir komuttur, bir dosyayı izlemeye almak için, kayda hazırlamak için, ya da birleştirme uyuşmazlıklarının çözüldüğünü işaretlemek gibi başka amaçlarla kullanılır). Gelin `benchmarks.rb` dosyasını kayda hazırlamak için `git add` komutunu çalıştırıp sonra da `git status` komutuyla duruma bakalım:
+`benchmarks.rb` dosyası “Changes not staged for commit” başlıklı bir bölümün altında görünüyor —bu başlık izlenmekte olan bir dosyada değişiklik yapılmış olduğu fakat dosyanın henüz hazırlık alanına alınmadığı durumlarda kullanılır. Dosyayı hazırlamak için, `git add` komutunu çalıştırın (`git add` çok amaçlı bir komuttur, bir dosyayı izlemeye almak için, kayda hazırlamak için, ya da birleştirme uyuşmazlıklarının çözüldüğünü işaretlemek gibi başka amaçlarla kullanılır). Gelin `benchmarks.rb` dosyasını kayda hazırlamak için `git add` komutunu çalıştırıp sonra da `git status` komutuyla duruma bakalım:
 
 	$ git add benchmarks.rb
 	$ git status
@@ -131,7 +131,7 @@ Her iki dosya da kayda hazırlanmış durumdadır ve bir sonraki kaydınıza dah
 	#	new file:   README
 	#	modified:   benchmarks.rb
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#	modified:   benchmarks.rb
@@ -162,7 +162,7 @@ Ne oldu? `benchmarks.rb` dosyası hem kayda hazırlanmış hem de kayda hazırla
 `.gitignore` dosyanızda bulundurabileceğiniz örüntüler şu kurallara bağlıdır:
 
 *	Boş satırlar ve `#` ile başlayan satırlar görmezden gelinir.
-*	Stadart _glob_ örüntüleri ayırt edilir (Ç.N.: _glob_ *nix tarafından kullanılan sınırlı bir kurallı ifade (_regular expression_) biçimidir).
+*	Stadart _glob_ örüntüleri ayırt edilir (Ç.N.: _glob_ \*nix tarafından kullanılan sınırlı bir kurallı ifade (_regular expression_) biçimidir).
 *	Bir klasörü belirtmek üzere örüntüleri bir eğik çizgi (`/`) ile sonlandırabilirsiniz.
 *	Bir örüntüyü ünlem işaretiyle (`!`) başlattığınızda, örüntünün tersi gereçli olur.
 
@@ -190,7 +190,7 @@ Diyelim `README` dosyasını düzenleyip kayda hazırladınız, sonra da `benchm
 	#
 	#	new file:   README
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#
 	#	modified:   benchmarks.rb
@@ -245,7 +245,7 @@ Yine, örnek olarak, `benchmarks.rb` dosyasını kayda hazırlayıp daha sonra �
 	#
 	#	modified:   benchmarks.rb
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#
 	#	modified:   benchmarks.rb
 	#
@@ -327,7 +327,7 @@ Her ne kadar kayıtları tam istediğiniz gibi düzenlemek inanılmaz derecede y
 	$ git status
 	# On branch master
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#
 	#	modified:   benchmarks.rb
 	#
@@ -341,13 +341,13 @@ Gördünüğüz gibi, kayıt işlemi yapmadan önce `benchmarks.rb` dosyasını 
 
 Bir dosyayı Git'ten silmek için, önce izlenen dosyaları listesinden çıkarmalı (daha doğrusu, kayda hazırlık alanından kaldırmalı) sonra da kaydetmelisiniz. `git rm` hem bunu yapar hem de dosyayı çalışma klasörünüzden siler, böylece dosyayı izlenmeyen dosyalar arasında görmezsiniz.
 
-Eğer dosyayı çalışma klasörünüzden silerseniz, `git status` çıktısının “Changed but not updated” (yani _kayda hazırlanmamış olanlar_) başlığı altında boy gösterecektir:
+Eğer dosyayı çalışma klasörünüzden silerseniz, `git status` çıktısının “Changes not staged for commit” (yani _kayda hazırlanmamış olanlar_) başlığı altında boy gösterecektir:
 
 	$ rm grit.gemspec
 	$ git status
 	# On branch master
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add/rm <file>..." to update what will be committed)
 	#
 	#       deleted:    grit.gemspec
@@ -672,7 +672,7 @@ Bu iki alt bölüm kayda hazırlık alanındaki ve çalışma klasörünüzdeki 
 	#
 	#       modified:   README.txt
 	#
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#   (use "git checkout -- <file>..." to discard changes in working directory)
 	#
@@ -685,7 +685,7 @@ Komut biraz tuhaf, ama iş görüyor. `benchmarks.rb` dosyası hazırlık alanı
 
 Peki `benchmarks.rb` dosyasındaki değişiklikleri korumak istemiyorsanız? Yaptığınız değişiklikleri kolayca nasıl geri alacaksınız —son kayıtta nasıl görünüyorsa o haline (ya da ilk klonlandığı haline, yahut çalışma klasörünüze ilk aldığınız haline) nasıl geri getireceksiniz? Neyse ki `git status` komutu bunu nasıl yapacağınızı da söylüyor. Son örnek çıktıda hazırlık alanı dışındaki değişiklikler şöyle görünüyor:
 
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#   (use "git checkout -- <file>..." to discard changes in working directory)
 	#
@@ -1026,7 +1026,7 @@ Kaydın etiketlendiğini göreceksiniz:
 
 ### Etiketleri Paylaşmak ###
 
-Aksi belirtilmedikçe `git push` komutu etiketleri uzak uçbirimelere aktarmaz. Etiketleri belirtik biçimde bir ortak sunucuya itmeniz gerekir. Bu süreç uçbirim dallarını paylaşmaya benzer —`git push origin [etiket-adi] komutunu çalıştırabilirsiniz.
+Aksi belirtilmedikçe `git push` komutu etiketleri uzak uçbirimelere aktarmaz. Etiketleri belirtik biçimde bir ortak sunucuya itmeniz gerekir. Bu süreç uçbirim dallarını paylaşmaya benzer —`git push origin [etiket-adi]` komutunu çalıştırabilirsiniz.
 
 	$ git push origin v1.5
 	Counting objects: 50, done.
@@ -1115,9 +1115,9 @@ Böylece son kaydı kolaylıkla görebilirsiniz:
 
 	    Signed-off-by: Scott Chacon <schacon@example.com>
 
-Gördüğünüz gibi Git yeni komutu takma ad olarak belirlediğini şeyin yerine kullanıyor. Ama belki de bir Git komutu çalıştırmak değil de başka br program kullanmak istiyorsunuz. Bu durumda komutun başına `!` karakterini koymalısınız. Bir Git yazılım havuzu üzerinde çalışan kendi araçlarınızı yazıyorsanız bu seçenek yararlı olabilir. Bunu göstermek için ,gitk`'yi çalıştırmak için `git visual` diye yeni bir takma ad tanımlayabiliriz:
+Gördüğünüz gibi Git yeni komutu takma ad olarak belirlediğini şeyin yerine kullanıyor. Ama belki de bir Git komutu çalıştırmak değil de başka br program kullanmak istiyorsunuz. Bu durumda komutun başına `!` karakterini koymalısınız. Bir Git yazılım havuzu üzerinde çalışan kendi araçlarınızı yazıyorsanız bu seçenek yararlı olabilir. Bunu göstermek için ,`gitk`'yi çalıştırmak için `git visual` diye yeni bir takma ad tanımlayabiliriz:
 
-	$ git config --global alias.visual "!gitk"
+	$ git config --global alias.visual '!gitk'
 
 ## Özet ##
 

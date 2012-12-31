@@ -96,16 +96,16 @@ Zobaczmy, dlaczego ty też powinieneś.
 
 Zajmijmy się prostym przykładem rozgałęziania i scalania używając schematu, jakiego mógłbyś użyć w rzeczywistej pracy. W tym celu wykonasz następujące czynności:
 
-1.	Wykonasz pracę nad stroną internetową.
-2.	Stworzysz gałąź dla nowej funkcji, nad którą pracujesz.
-3.	Wykonasz jakąś pracę w tej gałęzi.
+1. Wykonasz pracę nad stroną internetową.
+2. Stworzysz gałąź dla nowej funkcji, nad którą pracujesz.
+3. Wykonasz jakąś pracę w tej gałęzi.
 
 Na tym etapie otrzymasz telefon, że inny problem jest obecnie priorytetem i potrzeba błyskawicznej poprawki. Oto, co robisz:
 
-1.	Powrócisz na gałąź produkcyjną.
-2.	Stworzysz nową gałąź, by dodać tam poprawkę.
-3.	Po przetestowaniu, scalisz gałąź z poprawką i wypchniesz zmiany na serwer produkcyjny.
-4.	Przełączysz się na powrót do gałęzi z nową funkcją i będziesz kontynuować pracę.
+1. Powrócisz na gałąź produkcyjną.
+2. Stworzysz nową gałąź, by dodać tam poprawkę.
+3. Po przetestowaniu, scalisz gałąź z poprawką i wypchniesz zmiany na serwer produkcyjny.
+4. Przełączysz się na powrót do gałęzi z nową funkcją i będziesz kontynuować pracę.
 
 ### Podstawy rozgałęziania ###
 
@@ -233,7 +233,7 @@ Git nie zatwierdził automatycznie zmiany scalającej. Wstrzymał on cały proce
 	[master*]$ git status
 	index.html: needs merge
 	# On branch master
-	# Changed but not updated:
+	# Changes not staged for commit:
 	#   (use "git add <file>..." to update what will be committed)
 	#   (use "git checkout -- <file>..." to discard changes in working directory)
 	#
@@ -381,7 +381,7 @@ Ważne jest, żeby robiąc to wszystko pamiętać, że są to zupełnie lokalne 
 
 Zdalne gałęzie są odnośnikami do stanu gałęzi w zdalnym repozytorium. Są to lokalne gałęzie, których nie można zmieniać; są one modyfikowane automatycznie za każdym razem, kiedy wykonujesz jakieś operacje zdalne. Zdalne gałęzie zachowują się jak zakładki przypominające ci, gdzie znajdowały się gałęzie w twoim zdalnym repozytorium ostatnim razem, kiedy się z nim łączyłeś.
 
-Ich nazwy przybierają następującą formę: `(nazwa zdalnego repozytorium)/(nazwa gałęzi). Na przykład, gdybyś chciał zobaczyć, jak wygląda gałąź master w zdalnym repozytorium `origin` z chwili, kiedy po raz ostatni się z nim komunikowałeś, musiałbyś sprawdzić gałąź `origin/master`. Jeśli na przykład pracowałeś nad zmianą wraz z partnerem który wypchnął gałąź `iss53`, możesz mieć lokalną gałąź `iss53`, ale gałąź na serwerze będzie wskazywała rewizję znajdującą się pod `origin/iss53`.
+Ich nazwy przybierają następującą formę: `(nazwa zdalnego repozytorium)/(nazwa gałęzi)`. Na przykład, gdybyś chciał zobaczyć, jak wygląda gałąź master w zdalnym repozytorium `origin` z chwili, kiedy po raz ostatni się z nim komunikowałeś, musiałbyś sprawdzić gałąź `origin/master`. Jeśli na przykład pracowałeś nad zmianą wraz z partnerem który wypchnął gałąź `iss53`, możesz mieć lokalną gałąź `iss53`, ale gałąź na serwerze będzie wskazywała rewizję znajdującą się pod `origin/iss53`.
 
 Może być to nieco mylące, więc przyjrzyjmy się dokładniej przykładowi. Powiedzmy, że w swojej sieci masz serwer Git pod adresem `git.ourcompany.com`. Po sklonowaniu z niego repozytorium, Git automatycznie nazwie je jako `origin`, pobierze wszystkie dane, stworzy wskaźnik do miejsca gdzie znajduje się gałąź `master` i nazwie ją lokalnie `origin/master`; nie będziesz mógł jej przesuwać. Git da ci także do pracy twoją własną gałąź `master` zaczynającą się w tym samym miejscu, co zdalna (zobacz Rysunek 3-22).
 
