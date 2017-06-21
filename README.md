@@ -2,6 +2,7 @@
 
 # Pro Git Book Contents
 
+
 This is the source code for the Pro Git book contents.  It is licensed under
 the Creative Commons Attribution-Non Commercial-Share Alike 3.0 license.  I
 hope you enjoy it, I hope it helps you learn Git, and I hope you'll support
